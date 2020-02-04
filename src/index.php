@@ -14,7 +14,7 @@ $ts3ssv->useServerPort(9987);
 $ts3ssv->imagePath = "/img/default/";
 $ts3ssv->timeout = 2;
 $ts3ssv->setCache(180);
-$ts3ssv->hideEmptyChannels = false;
+$ts3ssv->hideEmptyChannels = true;
 $ts3ssv->hideParentChannels = false;
 $ts3ssv->showNicknameBox = true;
 $ts3ssv->showPasswordBox = false;
