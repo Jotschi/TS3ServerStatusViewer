@@ -2,8 +2,25 @@ TeamSpeak 3 Server Stats Viewer (TS3SSV)
 =====
 TeamSpeak 3 Server Stats Viewer is a simple status dashboard powered by PHP.
 Originally a fork of TSStatus (tsstatus.sebastien.me).
+Code was again forked from [LeoWinterDE/TS3ServerStatusViewer](https://github.com/LeoWinterDE/TS3ServerStatusViewer) to add docker support.
 
 ![screenshot of TS3ServerStatusViewer](https://i.imgur.com/x6529AN.jpg)
+
+## Docker
+
+```bash
+docker run --rm \
+    -e TS_PORT=10011 \
+    -e TS_HOST="your.ts-server.tld" \
+    -e TS_SERVER_PORT=9987 \
+    -e TS_VIEWER_LIGHT_MODE="true" \
+    -e TS_VIEWER_CACHE_TIME="20" \
+    -e TS_QUERY_LOGIN="LOGIN_NAME" \
+    -e TS_QUERY_PASS="PASSWORD" \
+    -v $PWD/src:/var/www/html/ \
+    -p 80:80 jotschi/ts3viewer
+```
+
 
 ## Download, install
 
